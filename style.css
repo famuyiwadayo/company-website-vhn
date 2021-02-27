@@ -226,6 +226,10 @@ section.partner {
   justify-content: space-evenly;
 }
 
+section.partner img {
+  transform: scale(0.8);
+}
+
 
 section.showcase {
   width: 100%;
@@ -356,7 +360,7 @@ section.showcase {
 
 .story__illustration .story__illustration__icon-block:nth-child(3) {
   top: -50px;
-  right: 0;
+  right: 50px;
   background-color: #FEEEB7;
   box-shadow: 0 4px 94px #FDD231a8;
 }
