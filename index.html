@@ -7,12 +7,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
     </head>
 
     <body>
 
         <!-- The header section -->
-        <header>
+        <header id="top">
             <!-- This is a navigation -->
             <nav class="navigation">
                 <a href="/" class="navigation__logo">
@@ -21,8 +22,8 @@
                 </a>
 
                 <div class="navigation__menu">
-                    <a href="#explore">explore</a>
-                    <a href="#get-in-touch">get in touch</a> 
+                    <a href="#explore">explore.</a>
+                    <a href="#get-in-touch">get in touch.</a> 
                 </div>
             </nav>
 
@@ -105,18 +106,18 @@
 
         <section class="story">
             <div class="story__banner">
-                <h2>Your story is our story</h2>
-                <p>we build stories that inspires and makes imagination a reality.</p>
-                <button>tell a story.</button>
+                <h2 id="story__banner__heading">Your story is our story</h2>
+                <p id="story__banner__paragraph">we build stories that inspires and makes imagination a reality.</p>
+                <button class="btn story__banner__btn">tell a story.</button>
             </div>
 
 
             <div class="story__illustration">
-                <img id="story__illustration--image" src="images/story-image.png" />
-                <div class="story__illustration--icon-block">
+                <img id="story__illustration__image" src="images/story-image.png" />
+                <div class="story__illustration__icon-block">
                     <img src="images/figma.png" />
                 </div>
-                <div class="story__illustration--icon-block">
+                <div class="story__illustration__icon-block">
                     <img src="images/sketch.png" />
                 </div>
             </div>
@@ -124,23 +125,24 @@
 
         <!-- Footer section -->
         <footer>
-            <div> 
-                <div>
-                    <strong>Company.</strong> 
-                </div>
+            <div class="footer__content"> 
+                <a href="/" class="logo footer__logo">
+                    <span class="logo__text footer__logo__text">Company</span>
+                    <span class="logo__dot footer__logo__dot"></span>
+                </a>
 
-                <div>
-                    <a href="#explore">explore</a>
+                <div class="menu footer__menu">
+                    <a href="#explore">explore.</a>
                     <a href="#get-in-touch">get in touch.</a>
-                    <a href="#tell-a-story">tell a story</a>
+                    <a href="#tell-a-story">tell a story.</a>
                 </div>
 
-                <button>
+                <a class="footer__btn" href="#top">
                     <img src="images/up-arrow.png">
-                </button>
+                </a>
             </div>
 
-            <div>
+            <div class="footer__copyright">
                 <strong>copyright 2020</strong>
             </div>
         </footer>

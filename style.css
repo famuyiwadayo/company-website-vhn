@@ -1,4 +1,10 @@
+/* Author: @famuyiwadayo */
+
+
+/* :root signifies the root of the document */
 :root {
+
+  /* --variable-name: value; assigns a value to a variable-name of your choice in memory */
   --primary: #ffe8d6;
   --accent: #fcd5ce;
   --btn-accent: #ff9785;
@@ -24,23 +30,30 @@
   --transition: all 300ms ease-in-out;
 }
 
+/* html, body selects the html and body tags in the document */
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
 }
 
+/* The asteric symbol (*) is css's way of select all the elements in the document
+** and assigning styles to them all together. 
+*/
 * {
   box-sizing: border-box;
 }
 
+/* selects the header tag in the document */
 header {
   padding: 0 var(--padding-lr);
   background-color: var(--primary);
 }
 
+/* selects the <element class="navigation"></element> tag in the document */
 .navigation {
   width: 100%;
   height: 68px;
@@ -49,23 +62,32 @@ header {
   align-items: center;
 }
 
-.navigation__logo {
+/* selects the <element class="navigation__logo"></element> tag in the document */
+.logo, .navigation__logo {
   text-decoration: none;
 }
 
-.navigation__logo .navigation__logo__text {
+/* selects the <element class="navigation__logo navigation__logo__text"></element> tag in the document */
+.logo .logo__text, .navigation__logo .navigation__logo__text {
   font-size: 24px;
   font-weight: bold;
   color: var(--logo-primary);
   transition: var(--transition);
 }
 
-.navigation__logo:hover .navigation__logo__text {
+/* selects the element with the classname .navigation__logo when the mouse is
+** on top of it and then apply the styles to the element with the classname
+** .navigation__logo__text 
+*/
+.logo:hover .logo__text, .navigation__logo:hover .navigation__logo__text {
   color: var(--logo-accent);
   transition: var(--transition);
 }
 
-.navigation__logo .navigation__logo__dot {
+/* selects the element with the classname .navigation__logo__dot inside 
+** the element with then classname .navigation__logo.
+*/
+.logo .logo__dot, .navigation__logo .navigation__logo__dot {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -74,19 +96,28 @@ header {
   transition: var(--transition);
 }
 
-.navigation__logo:hover .navigation__logo__dot {
+/* selects the element with the classname .navigation__logo when the mouse is
+** on top of it and then apply the styles to the element with the classname
+** .navigation__logo__dot 
+*/
+.logo:hover .logo__dot, .navigation__logo:hover .navigation__logo__dot {
   background-color: var(--black);
   transition: var(--transition);
 }
 
-.navigation__menu a {
+/* selects the anchor element inside the element with the classname .navigation__menu */
+.menu a, .navigation__menu a {
   text-decoration: none;
   color: var(--link-primary);
   position: relative;
   padding: 10px;
 }
 
-.navigation__menu a::after {
+/* selects the anchor element's psuedo 'after' element
+** visit this link to learn more 
+** https://www.w3schools.com/css/css_pseudo_elements.asp
+*/
+.menu a::after, .navigation__menu a::after {
   content: "";
   position: absolute;
   width: 6px;
@@ -101,21 +132,22 @@ header {
   transition: var(--transition);
 }
 
-.navigation__menu a:first-child {
+.menu a:first-child, .navigation__menu a:first-child {
   margin-right: 12px;
 }
 
-.navigation__menu a:hover {
+.menu a:hover, .navigation__menu a:hover {
   color: var(--link-hover);
   transition: var(--transition);
 }
 
-.navigation__menu a:hover::after {
+.menu a:hover::after, .navigation__menu a:hover::after {
   transform: translate(-50%, -200%);
   opacity: 1;
   visibility: visible;
   transition: var(--transition);
 }
+
 
 header .hero {
   display: flex;
@@ -268,5 +300,111 @@ section.showcase {
 
 
 .story {
-  
+  padding: 200px var(--padding-lr);
+  display: flex;
+  justify-content: center;
+}
+
+.story .story__banner {
+  max-width: 450px;
+  align-self: center;
+  margin-right: 80px;
+}
+
+.story__banner #story__banner__heading {
+  font-size: 48px;
+  font-weight: bold;
+  max-width: 350px;
+  margin: 10px 0;
+  color: rgba(0, 0, 0, .9);
+  line-height: 97.9%;
+}
+
+.story__banner #story__banner__paragraph {
+  font-size: 28px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, .6);
+  margin: 0;
+  margin-top: 19px;
+}
+
+.story .story__illustration {
+  position: relative;
+}
+
+.story__illustration #story__illustration__image {
+  width: 80%;
+}
+
+.story__illustration .story__illustration__icon-block {
+  position: absolute;
+  padding: 20px;
+  width: 110px;
+  height: 92px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.story__illustration .story__illustration__icon-block:nth-child(2) {
+  background-color: #479CFF;
+  box-shadow: 0 4px 94px #0f7bffa8;
+  bottom: 80px;
+  left: -80px;
+}
+
+.story__illustration .story__illustration__icon-block:nth-child(3) {
+  top: -50px;
+  right: 0;
+  background-color: #FEEEB7;
+  box-shadow: 0 4px 94px #FDD231a8;
+}
+
+.story__illustration__icon-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+footer {
+  padding: 40px var(--padding-lr);
+  background: var(--showcase-accent);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__content .footer__btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  outline: transparent;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  transition: all 300ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__btn:hover {
+  transition: all 300ms ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.footer__btn img {
+  transform: scale(0.7);
+}
+
+.footer__copyright {
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  font-weight: normal;
 }
