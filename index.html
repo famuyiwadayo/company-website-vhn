@@ -1,87 +1,99 @@
 <!DOCTYPE html> 
+
 <html>
     <head>
         <title>Company</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
 
-        <!-- This is a navigation -->
-        <nav>
-            <div>
-                Company
-            </div>
+        <!-- The header section -->
+        <header>
+            <!-- This is a navigation -->
+            <nav class="navigation">
+                <a href="/" class="navigation__logo">
+                    <span class="navigation__logo__text">Company</span>
+                    <span class="navigation__logo__dot"></span>
+                </a>
 
-            <div>
-                <a href="#explore">explore</a>
-                <a href="#get-in-touch">get in touch</a> 
-            </div>
-        </nav>
+                <div class="navigation__menu">
+                    <a href="#explore">explore</a>
+                    <a href="#get-in-touch">get in touch</a> 
+                </div>
+            </nav>
 
 
-        <!-- Hero section -->
-        <section>
-            <div>
-                <a href="#facebook">fbook</a>
-                <a href="#twitter">twitr</a>
-                <a href="#linkedin">linkedin</a>
-                <a href="#dribbble">drib</a>
-            </div>
+            <!-- Hero section -->
+            <div class="hero">
+                <div class="hero__social-links">
+                    <a href="#facebook">fbook.</a>
+                    <a href="#twitter">twitr.</a>
+                    <a href="#linkedin">linkedin.</a>
+                    <a href="#dribbble">drib.</a>
+                </div>
 
-            <div>
-                <img src="images/hero-arrow.png" />
-                <h1>We design technologies for startup to fortune 500 companies.</h1>
-                <button>get in touch.</button>
-                <img src="images/hero-image.png" />
+                <div class="hero__content">
+                    <div class="hero__banner">
+                        <img class="hero__banner__arrow" src="images/hero-arrow.png" />
+                        <h1 class="hero__banner__text">We design technologies for startup to fortune 500 companies.</h1>
+                        <button class="hero__banner__btn">get in touch.</button>
+                    </div>
+                    
+                    <img class="hero__banner__image" src="images/hero-image.png" />
+                </div>
             </div>
-        </section>
+        </header>
 
         <!-- Partner section -->
-        <section>
-            <img src="images/google.png" />
-            <img src="images/ritter.png" />
-            <img src="images/radio.png" />
-            <img src="images/asc.png" />
+        <section class="partner">
+            <img width="98px" height="32px" src="images/google.png" />
+            <img width="105px" height="30px" src="images/ritter.png" />
+            <img width="263px" height="47px" src="images/radio.png" />
+            <img width="139px" height="39px" src="images/asc.png" />
         </section>
 
         <!-- Showcase section -->
-        <section>
-            <div>
-                <div>
-                    <div>
-                        <img src="images/shapes.png" />
-                        <h3>200+</h3>
-                        <h4>Website</h4>
-                        <button>
-                            <span>explore</span> 
-                            <img src="images/button-arrow.png" />
+        <section class="showcase">
+            <div class="showcase__wrapper">
+                <div class="showcase__container">
+                    <div class="showcase__instance">
+                        <img class="showcase__instance__image" src="images/shapes.png" />
+                        <h3 class="showcase__instance__count">200+</h3>
+                        <h4 class="showcase__instance__name">Website</h4>
+                        <button class="btn showcase__instance__btn">
+                            <span class="showcase__instance__btn__text">explore</span> 
+                            <img class="showcase__instance__btn__arrow" src="images/button-arrow.png" />
                         </button>
                     </div>
-                    <div>
-                        <img src="images/shapes.png" />
-                        <h3>500+</h3>
-                        <h4>Designs</h4>
-                        <button>
-                            <span>explore</span> 
-                            <img src="images/button-arrow.png" />
+                    <div class="showcase__instance">
+                        <img class="showcase__instance__image" src="images/shapes.png" />
+                        <h3 class="showcase__instance__count">500+</h3>
+                        <h4 class="showcase__instance__name">Designs</h4>
+                        <button class="btn showcase__instance__btn">
+                            <span class="showcase__instance__btn__text">explore</span>
+                            <img class="showcase__instance__btn__arrow" src="images/button-arrow.png" />
                         </button>
                     </div>
-                    <div>
-                        <img src="images/shapes.png" />
-                        <h3>80+</h3>
-                        <h4>Brands</h4>
-                        <button>
-                            <span>explore</span> 
-                            <img src="images/button-arrow.png" />
+                    <div class="showcase__instance">
+                        <img class="showcase__instance__image" src="images/shapes.png" />
+                        <h3 class="showcase__instance__count">80+</h3>
+                        <h4 class="showcase__instance__name">Brands</h4>
+                        <button class="btn showcase__instance__btn">
+                            <span class="showcase__instance__btn__text">explore</span>
+                            <img class="showcase__instance__btn__arrow" src="images/button-arrow.png" />
                         </button>
                     </div>
-                    <div>
-                        <img src="images/shapes.png" />
-                        <h3>200+</h3>
-                        <h4>Apps</h4>
-                        <button>
-                            <span>explore</span> 
-                            <img src="images/button-arrow.png" />
+                    <div class="showcase__instance">
+                        <img class="showcase__instance__image" src="images/shapes.png" />
+                        <h3 class="showcase__instance__count">200+</h3>
+                        <h4 class="showcase__instance__name">Apps</h4>
+                        <button class="btn showcase__instance__btn">
+                            <span class="showcase__instance__btn__text">explore</span>
+                            <img class="showcase__instance__btn__arrow" src="images/button-arrow.png" />
                         </button>
                     </div>
                 </div>
@@ -91,20 +103,20 @@
 
         <!-- Story section -->
 
-        <section>
-            <div>
+        <section class="story">
+            <div class="story__banner">
                 <h2>Your story is our story</h2>
                 <p>we build stories that inspires and makes imagination a reality.</p>
                 <button>tell a story.</button>
             </div>
 
 
-            <div>
-                <img src="images/story-image.png" />
-                <div>
+            <div class="story__illustration">
+                <img id="story__illustration--image" src="images/story-image.png" />
+                <div class="story__illustration--icon-block">
                     <img src="images/figma.png" />
                 </div>
-                <div>
+                <div class="story__illustration--icon-block">
                     <img src="images/sketch.png" />
                 </div>
             </div>
